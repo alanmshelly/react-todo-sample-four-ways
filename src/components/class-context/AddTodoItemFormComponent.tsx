@@ -1,7 +1,8 @@
-import React, {createRef, useContext} from 'react'
+import React, {createRef} from 'react'
 import {TodoListContext} from './TodoListContextProvider'
 
 export class AddTodoItemFormComponent extends React.Component {
+    static contextType = TodoListContext
     textRef = createRef<HTMLInputElement>()
 
     onAddButtonClick() {
@@ -10,8 +11,7 @@ export class AddTodoItemFormComponent extends React.Component {
             return
         }
 
-        const {dispatch} = useContext(TodoListContext)
-        dispatch({type: 'add', text: textInput.value})
+        this.context.dispatch({type: 'add', text: textInput.value})
         textInput.value = ''
     }
 
