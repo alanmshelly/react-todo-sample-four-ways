@@ -2,7 +2,7 @@ import React from 'react'
 import {LocalStorageTodoRepo} from '../../src/LocalStorageTodoRepo'
 import Sinon from 'sinon'
 import {TodoItem, TodoRepo} from '../../src/TodoRepo'
-import {getByLabelText, getByText, waitForElement} from '@testing-library/react'
+import {getByLabelText, getByText, wait} from '@testing-library/react'
 import {act} from 'react-dom/test-utils'
 import {renderRoutesAtPath} from '../renderHelpers'
 import {createDelayedPromise, DelayedPromise} from '../DelayedPromise'
@@ -30,8 +30,7 @@ it('should show page title', async () => {
     const container = await renderClassContextTodoPage(stubTodoRepo)
 
 
-    await waitForElement(() => getByText(container, 'Todo List'))
-    expect(container).toHaveTextContent('Todo List')
+    await wait(() => expect(container).toHaveTextContent('Todo List (Class/Context)'))
 })
 
 it('should show retrieved todo items', async () => {
