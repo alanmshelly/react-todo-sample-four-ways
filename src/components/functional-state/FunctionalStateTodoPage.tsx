@@ -27,7 +27,7 @@ export function FunctionalStateTodoPage(props: Props) {
 
     return (
         <div>
-            <h1>Todo List</h1>
+            <h1>Todo List (Functional/State)</h1>
             <TodoItemListComponent todoItems={todoItems} todoRepo={todoRepo} onDeleteItem={onDeleteItem}/>
             <AddTodoItemFormComponent todoRepo={todoRepo} onAddItem={onAddItem}/>
         </div>

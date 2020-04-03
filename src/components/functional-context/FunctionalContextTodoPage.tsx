@@ -13,7 +13,7 @@ export function FunctionalContextTodoPage(props: Props) {
 
     return (
         <TodoListContextProvider todoRepo={todoRepo}>
-            <h1>Todo List</h1>
+            <h1>Todo List (Functional/Context)</h1>
             <TodoItemListComponent/>
             <AddTodoItemFormComponent/>
         </TodoListContextProvider>

@@ -35,7 +35,7 @@ export class ClassStateTodoPage extends React.Component<Props, State> {
         const {todoItems} = this.state
         return (
             <div>
-                <h1>Todo List</h1>
+                <h1>Todo List (Class/State)</h1>
                 {
                     /* NOTE:
                      * You need to pass a callback to update the state.
