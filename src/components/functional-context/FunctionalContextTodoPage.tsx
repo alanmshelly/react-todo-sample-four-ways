@@ -9,10 +9,8 @@ interface Props {
 }
 
 export function FunctionalContextTodoPage(props: Props) {
-    const todoRepo = props.todoRepo
-
     return (
-        <TodoListContextProvider todoRepo={todoRepo}>
+        <TodoListContextProvider todoRepo={props.todoRepo}>
             <h1>Todo List (Functional/Context)</h1>
             <TodoItemListComponent/>
             <AddTodoItemFormComponent/>

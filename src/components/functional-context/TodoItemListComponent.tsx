@@ -17,9 +17,10 @@ export function TodoItemListComponent() {
 
 function TodoItemComponent(props: { todoItem: TodoItem }) {
     const {todoItem} = props
-    const {dispatch} = useContext(TodoListContext)
+    const {dispatch, todoRepo} = useContext(TodoListContext)
 
     async function onDeleteButtonClick(id: number) {
+        await todoRepo.deleteItem(id)
         dispatch({
             type: 'delete',
             id,

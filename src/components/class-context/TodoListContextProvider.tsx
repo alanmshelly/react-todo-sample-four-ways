@@ -40,6 +40,9 @@ export class TodoListContextProvider extends React.Component<Props, State> {
     /* NOTE:
      * Management of todoItems is simple since all changes to the state are handled in one place. You could also split
      * this into multiple functions but I started implementing using a reducer pattern so it ended up like this.
+     *
+     * This implementation puts the async repo calls in the dispatch so a true reducer could not be used.
+     * See the functional-context implementation for a
      */
     async dispatch(action: TodoItemsReducerAction) {
         const {todoRepo} = this.props

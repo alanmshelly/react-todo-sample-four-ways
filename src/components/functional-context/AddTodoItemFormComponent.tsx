@@ -4,14 +4,15 @@ import {TodoListContext} from './TodoListContextProvider'
 export function AddTodoItemFormComponent() {
     let textRef = createRef<HTMLInputElement>()
 
-    const {dispatch} = useContext(TodoListContext)
+    const {dispatch, todoRepo} = useContext(TodoListContext)
 
     async function onAddButtonClick() {
         const textInput = textRef.current
         if (textInput === null) {
             return
         }
-        dispatch({type: 'add', text: textInput.value})
+        const todoItem = await todoRepo.addItem(textInput.value)
+        dispatch({type: 'add', todoItem})
         textInput.value = ''
     }
 
