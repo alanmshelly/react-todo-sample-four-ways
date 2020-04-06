@@ -34,4 +34,3 @@ export function FunctionalStateTodoPage(props: Props) {
         </div>
     )
 }
-

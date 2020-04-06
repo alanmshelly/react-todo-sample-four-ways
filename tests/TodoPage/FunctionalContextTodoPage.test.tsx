@@ -222,5 +222,11 @@ describe('asynchronous actions', () => {
 })
 
 function renderFunctionalContextTodoPage(todoRepo: TodoRepo) {
+    /**
+     * NOTE:
+     * Route params can be set using generatePath.
+     *
+     * A string is being used for the path instead of the PagePaths enum in order to detect unexpected changes to the path.
+     */
     return renderRoutesAtPath('/functional-context', {todoRepo})
 }

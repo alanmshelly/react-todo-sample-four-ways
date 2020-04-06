@@ -1,5 +1,6 @@
-import {Link, useLocation} from 'react-router-dom'
 import React from 'react'
+import {PagePaths} from './PagePaths'
+import {Link, useLocation} from 'react-router-dom'
 
 export function NavigationMenu() {
     /**
@@ -19,33 +20,40 @@ export function NavigationMenu() {
     return (
         <ul>
             <li>
+                {
+                    /**
+                     * NOTE:
+                     * If the `to` path were to have a param, we could use generatePath
+                     * https://reacttraining.com/react-router/core/api/generatePath
+                     */
+                }
                 <Link
-                    to="/class-context"
-                    className={location.pathname === "/class-context" ? 'selected' : ''}
+                    to={PagePaths.ClassContextTodoPage}
+                    className={location.pathname === PagePaths.ClassContextTodoPage ? 'selected' : ''}
                 >
                     Class Component with Context
                 </Link>
             </li>
             <li>
                 <Link
-                    to="/class-state"
-                    className={location.pathname === "/class-state" ? 'selected' : ''}
+                    to={PagePaths.ClassStateTodoPage}
+                    className={location.pathname === PagePaths.ClassStateTodoPage ? 'selected' : ''}
                 >
                     Class Component with State
                 </Link>
             </li>
             <li>
                 <Link
-                    to="/functional-context"
-                    className={location.pathname === "/functional-context" ? 'selected' : ''}
+                    to={PagePaths.FunctionalContextTodoPage}
+                    className={location.pathname === PagePaths.FunctionalContextTodoPage ? 'selected' : ''}
                 >
                     Functional Component with Context
                 </Link>
             </li>
             <li>
                 <Link
-                    to="/functional-state"
-                    className={location.pathname === "/functional-state" ? 'selected' : ''}
+                    to={PagePaths.FunctionalStateTodoPage}
+                    className={location.pathname === PagePaths.FunctionalStateTodoPage ? 'selected' : ''}
                 >
                     Functional Component with State
                 </Link>
