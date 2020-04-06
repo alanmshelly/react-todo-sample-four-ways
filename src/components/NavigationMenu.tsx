@@ -25,6 +25,8 @@ export function NavigationMenu() {
                      * NOTE:
                      * If the `to` path were to have a param, we could use generatePath
                      * https://reacttraining.com/react-router/core/api/generatePath
+                     *
+                     * Also, I realize NavLink can be used instead but using Link shows the useLocation hook.
                      */
                 }
                 <Link
