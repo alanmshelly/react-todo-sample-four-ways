@@ -14,7 +14,8 @@ export class ClassContextTodoPage extends React.Component<Props> {
             <TodoListContextProvider todoRepo={this.props.todoRepo}>
                 <h1>Todo List (Class/Context)</h1>
                 {
-                    /* NOTE:
+                    /**
+                     * NOTE:
                      * Since we're using context, we don't need to pass the todoItems and todoRepo
                      * as props at every single layer.
                      */

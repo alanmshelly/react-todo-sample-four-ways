@@ -37,7 +37,8 @@ export class ClassStateTodoPage extends React.Component<Props, State> {
             <div>
                 <h1>Todo List (Class/State)</h1>
                 {
-                    /* NOTE:
+                    /**
+                     * NOTE:
                      * You need to pass a callback to update the state.
                      * Whether you call the repo in this class or pass it down to be used in the handlers at
                      * lower levels depends on where you think the logic should be held.

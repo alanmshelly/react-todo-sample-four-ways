@@ -3,7 +3,8 @@ import {TodoListContext} from './TodoListContextProvider'
 import {TodoItem} from '../../TodoRepo'
 
 export function TodoItemListComponent() {
-    /* NOTE:
+    /**
+     * NOTE:
      * Hooks make it really simple and clean to use context
      */
     const {todoItems} = useContext(TodoListContext)

@@ -11,13 +11,15 @@ export async function renderRoutesAtPath(path: string, props: Partial<RoutesProp
     }
 
     let renderResult: RenderResult | null = null
-    /* NOTE:
+    /**
+     * NOTE:
      * act should be used whenever the page is updated or rendered (https://reactjs.org/docs/test-utils.html#act)
      * However, it is built into a lot of test-library functions so may sometimes be omitted.
      * I noticed that you almost always need to use it when using react hooks (useState, useEffect etc).
      */
     await act(async () => {
-        /* NOTE:
+        /**
+         * NOTE:
          * I test by rendering through the Routes component as it lets me test including the path, giving me a lot of
          * confidence. This setup also injects dummies into the props by default which helps ensure nothing unnecessary
          * is being used.

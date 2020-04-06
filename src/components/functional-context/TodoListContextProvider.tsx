@@ -12,7 +12,8 @@ export const TodoListContext = createContext<TodoListContextType>({
     todoRepo: {} as any,
 })
 
-/* NOTE:
+/**
+  * NOTE:
  * Typescript is smart enough that it will give a lint error if a payload doesn't match a type.
  * You can use enums for the type as well but I found it makes it very long (TodoItemsReducerActionType.ADD).
  */
@@ -26,7 +27,8 @@ interface Props {
     children?: ReactNode
 }
 
-/* NOTE:
+/**
+  * NOTE:
  * Define reducer outside of the component so it doesn't get redefined every time the component is updated.
  */
 function reducer(state: TodoItem[], action: TodoItemsReducerAction) {
@@ -43,12 +45,14 @@ function reducer(state: TodoItem[], action: TodoItemsReducerAction) {
 export const TodoListContextProvider: FunctionComponent<Props> = (props: Props) => {
     const {todoRepo, children} = props
 
-    /* NOTE:
+    /**
+  * NOTE:
      * Built-in useReducer hook simplifies using reducers
      */
     const [todoItems, dispatch] = useReducer(reducer, [])
 
-    /* NOTE:
+    /**
+  * NOTE:
      * You can name hook callbacks for readability :)
      */
     useEffect(function loadTodoItems() {
@@ -56,7 +60,8 @@ export const TodoListContextProvider: FunctionComponent<Props> = (props: Props) 
             .then(todoItems => dispatch({type: 'set', todoItems}))
     }, [todoRepo])
 
-    /* NOTE:
+    /**
+  * NOTE:
      * Passing the todoRepo in the context so that each component can handle the async API calls.
      * See the class-context implementation for when the repo calls are handled in the dispatch function.
      *

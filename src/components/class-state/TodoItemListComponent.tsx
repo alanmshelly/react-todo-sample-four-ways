@@ -14,7 +14,8 @@ export class TodoItemListComponent extends React.Component<TodoItemListComponent
         return (
             <ul>
                 {todoItems.map(todoItem =>
-                    /* NOTE:
+                    /**
+                     * NOTE:
                      * props need to be passed again. This is a simple case but for more complex components,
                      * many layers is imaginable.
                      */

@@ -20,7 +20,8 @@ interface State {
     todoItems: TodoItem[]
 }
 
-/* NOTE:
+/**
+  * NOTE:
  * This component wraps the context and manages the todoItems in the component's state.
  * The context provides the todoItems as well as a dispatch function to manipulate the state.
  */
@@ -37,7 +38,8 @@ export class TodoListContextProvider extends React.Component<Props, State> {
         this.dispatch({type: 'load'})
     }
 
-    /* NOTE:
+    /**
+  * NOTE:
      * Management of todoItems is simple since all changes to the state are handled in one place. You could also split
      * this into multiple functions but I started implementing using a reducer pattern so it ended up like this.
      *

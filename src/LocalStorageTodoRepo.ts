@@ -1,6 +1,7 @@
 import {TodoItem, TodoRepo} from './TodoRepo'
 
-/* NOTE:
+/**
+ * NOTE:
  * wait is meant to simulate delays caused by IO, in order to check that operations that are called before
  * another one finishes don't cause unexpected changes to the todo list.
  */

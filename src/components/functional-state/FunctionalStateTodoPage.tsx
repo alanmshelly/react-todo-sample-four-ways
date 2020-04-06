@@ -7,7 +7,8 @@ interface Props {
     todoRepo: TodoRepo
 }
 
-/* NOTE:
+/**
+ * NOTE:
  * Not too much different from using class + state other than the hooks syntax
  */
 export function FunctionalStateTodoPage(props: Props) {

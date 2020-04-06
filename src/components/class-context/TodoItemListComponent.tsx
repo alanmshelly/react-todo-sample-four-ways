@@ -7,7 +7,8 @@ export class TodoItemListComponent extends React.Component {
         return (
             <ul>
                 {
-                    /* NOTE:
+                    /**
+                     * NOTE:
                      * This is one way of using the context
                      */
                 }
@@ -22,7 +23,8 @@ export class TodoItemListComponent extends React.Component {
 }
 
 class TodoItemComponent extends React.Component<{ todoItem: TodoItem }> {
-    /* NOTE:
+    /**
+     * NOTE:
      * This is another way of using the context. You are limited to one context per component using this method.
      */
     static contextType = TodoListContext
