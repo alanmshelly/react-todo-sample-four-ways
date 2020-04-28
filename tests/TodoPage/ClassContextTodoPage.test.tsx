@@ -5,7 +5,7 @@ import {TodoItem, TodoRepo} from '../../src/TodoRepo'
 import {getByLabelText, getByText, wait} from '@testing-library/react'
 import {act} from 'react-dom/test-utils'
 import {renderRoutesAtPath} from '../renderHelpers'
-import {createDelayedPromise, DelayedPromise} from '../DelayedPromise'
+import {createDelayedPromise, DelayedPromise}from 'delay-promises'
 import {clickButton, clickDeleteButtonForTodoWithText, setInputValue} from '../domHelpers'
 
 let stubTodoRepo: Sinon.SinonStubbedInstance<TodoRepo>
